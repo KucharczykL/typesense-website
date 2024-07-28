@@ -13,7 +13,7 @@ The record so far has been 3 hours, to switch from Algolia to Typesense in produ
 On the other end of the spectrum, we've had a few users take 1-1.5 months, since they wanted to deploy Typesense behind a feature flag to a small percentage of traffic, and then slowly ramp traffic up to Typesense over a period of weeks, while closely metrics and fine-tuning.
 
 If you're using Algolia's [InstantSearch](https://github.com/algolia/instantsearch) UI widgets, then the migration timeline tends to be on the lower end of the spectrum,
-since we have an [adapter library](#migrating-frontend-ui-components) that once you install into your frontend app, will take care of transalting the queries to Typesense. So you can keep your existing UI widgets as is, and migrate in as little as 30 minutes to an hour.
+since we have an [adapter library](#migrating-frontend-ui-components) that once you install into your frontend app, will take care of translating the queries to Typesense. So you can keep your existing UI widgets as is, and migrate in as little as 30 minutes to an hour.
 
 So the key work involved would be to push your JSON documents into Typesense, instead of Algolia and account for the nuances below.
 You'd also want to consider migration of synonyms and query rules, for which both Algolia and Typesense have APIs for to export and import. 
